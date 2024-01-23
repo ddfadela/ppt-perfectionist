@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/app/_styles/navbar.module.css";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LuDownload, LuMenu } from "react-icons/lu";
@@ -64,7 +63,7 @@ const Menu = () => {
           {navlinks.map((nav) => (
             <li
               key={nav.id}
-              className={`text-sm lg:text-[16px] cursor-pointer hover:text-blue-main ${styles.navLink} relative  ${
+              className={`text-sm lg:text-[16px] cursor-pointer hover:text-blue-main  relative  ${
                 pathname === nav.link ? "text-blue-main font-bold " : "font-medium "
               }`}
             >
@@ -98,7 +97,7 @@ const Menu = () => {
             {navlinks.map((nav) => (
               <div
                 key={nav.id}
-                className={`text-[18px] cursor-pointer hover:text-blue-main ${styles.navLink} relative  ${
+                className={`text-[18px] cursor-pointer hover:text-blue-main relative  ${
                   pathname === nav.link ? "text-blue-main font-bold " : "font-medium "
                 }`}
                 onClick={() => {
