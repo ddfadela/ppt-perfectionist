@@ -32,6 +32,11 @@ const Slogan = () => {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
+  const handleOrderNow = () => {
+    // Redirect to Google.com when the "ORDER NOW" button is clicked
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdV9DjfRdGjHDnNksHkStZZQvUeNQaCDsOuYkvsFT-g_Y_oZQ/viewform?fbclid=IwAR1PigYfVk6e7s1ey3P9yXJ-7J1esAMvxPxPGyOoj8c8wcWW2nFFeST_2BQ";
+  };
+
 
   useEffect(() => {
     let currentIndex = 0;
@@ -55,20 +60,29 @@ const Slogan = () => {
 
   return (
     <div className="relative min-h-screen mt-0">
+      
       <div className="absolute inset-0 transform -skew-y-12 origin-top-left z-10  mt-0">
-        <div className="bg-cyan-100 grid grid-cols-10 grid-rows-6 min-h-screen bg-gradient-to-r from-cyan-400 to-cyan-200 transform">
+        <div className="bg-cyan-100 grid grid-cols-10 grid-rows-6 min-h-screen bg-gradient-to-r from-cyan-300 to-cyan-200 transform">
           <div className="bg-cyan-200 opacity-50 row-start-3 col-span-2"></div>
           <div className="bg-cyan-100 opacity-50 row-start-5 col-start-9 col-span-2"></div>
         </div>
       </div>
       <div className="mx-[20%] relative z-20 ">
-      <div className="font-bold text-[28px] md:text-[54px] lg:text-[62px] text-center absolute top-[200px] md:top-[180px] ">
+      <div className="font-bold text-[28px] md:text-[52px] lg:text-[62px] text-center absolute top-[200px] md:top-[180px] ">
         Unlock the Power of Presentation Excellence with PPT Perfectionist
         <p className="text-center font-medium text-[20px] mt-[10px] text-gray-700">
         {visibleText}
         {cursorVisible && <span className="animate-blink">|</span>}
       </p>
+      <button
+      className="order-button hover:bg-blue-700 text-white py-2 px-4  no-border bg-[#4F46E5] bg- border-100px no-shadow rounded-3xl"
+          onClick={handleOrderNow}
+        >
+          ORDER NOW
+        </button>
       </div>
+      
+     
       </div>
     </div>
   );

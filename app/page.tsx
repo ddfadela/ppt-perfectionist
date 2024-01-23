@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Menu from './Component/Menu'
-// import Contact from './Component/Contact'
+import React from 'react'
 import Slogan from './Component/Slogan'
 import Works from './Component/Works'
 import About from './Component/About'
@@ -12,7 +12,8 @@ import Form from './Component/Form'
 
 export default function Home() {
   return (
-  <div>
+  <div className='overflow: hidden;
+  '>
     <Menu/>
     <Slogan/>
     <Works/>

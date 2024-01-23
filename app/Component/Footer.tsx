@@ -1,29 +1,36 @@
 "use client";
-import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram ,FaTiktok} from "react-icons/fa";
 import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
+  const handleEmailClick = () => {
+    window.location.href = "mailto:ppt.perfectionist@gmail.com";
+  };
+
   return (
     <section className={` flex-col bg-white justify-around pt-10 border-t`}>
       <div
         className={`flex justify-center items-start flex-row  mb-2 w-full `}
       >
         <a
-          href="https://www.linkedin.com/in/clint-briley-50056920a/"
+          href="https://www.tiktok.com/@ppt_perfectionist?_t=8jH7ls9478A&_r=1&fbclid=IwAR3HRo8YfQKgpEhqC1kHUBaXJPrmqf8LkBzaDDh14OjxRefcyXBPs8Q7qj8"
           target="_blank"
           rel="noreferrer"
         >
           <div className="rounded-full shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-            <FaLinkedinIn />
+            <FaTiktok />
           </div>
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
+        <a href="https://www.instagram.com/ppt_perfectionist?igsh=NTc4MTIwNjQ2YQ%3D%3D&fbclid=IwAR1KI2ywd3n47KJUKX_kU-pA6bOPlc02n3zt-jpkTQtYwBVQnEBI45vAX00" target="_blank" rel="noreferrer">
           <div className="rounded-full shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
             <FaInstagram />
           </div>
         </a>
 
-        <div className="rounded-full shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+        <div
+          className="rounded-full shadow-lg shadow-gray-200 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+          onClick={handleEmailClick}
+        >
           <AiOutlineMail />
         </div>
        

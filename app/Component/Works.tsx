@@ -1,35 +1,143 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef, useEffect } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { MdArrowBackIos,MdArrowForwardIos  } from "react-icons/md";
 
 const Works = () => {
+  const placeholderDuration = 10; // Set your desired placeholder duration in seconds
+  const videoHeight = "200px"; // Set your desired height for the videos
+
+  const videos = [
+      { src: "/portfolio1.mp4", poster: "/portfolio1.jpg" },
+      { src: "/portfolio2.mp4", poster: "/portfolio2.jpg" },
+      { src: "/portfolio3.mp4", poster: "/portfolio3.jpg" },
+      { src: "/portfolio4.mp4", poster: "/portfolio4.jpg" },
+      { src: "/portfolio5.mp4", poster: "/portfolio5.jpg" },
+      { src: "/portfolio6.mp4", poster: "/portfolio6.jpg" },
+  ];
+
+  const CustomPrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div className="custom-arrow custom-prev " onClick={onClick} >
+        <MdArrowForwardIos className="arrow-icon rotate-180 " size={30}/>
+      </div>
+    );
+  };
+
+  const CustomNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div className="custom-arrow custom-next" onClick={onClick}>
+        <MdArrowForwardIos className="arrow-icon" size={30}/>
+      </div>
+    );
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    lazyLoad: 'ondemand', // Add lazyLoad property
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+  };
+  
+  useEffect(() => {
+    // Reinitialize the Slider after the page has loaded
+    const slider = Slider && Slider.current;
+    if (slider) {
+      slider.slickGoTo(0); // Go to the first slide
+      // slider.slickSetOption(settings, true); // Set the updated settings
+    }
+  }, [settings]);
   return (
     <div id="works" className="w-full text-center">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="title text-4xl lg:text-5xl font-bold tracking-widest uppercase ">
-          Projects
-        </p>
-        <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <h1> asfbghgfdsafgbhg</h1>
+      <div className="max-w-[1240px] mx-auto md:px-2 py-16">
+        {/* ... (previous code) */}
+        <div className=" md:grid-cols-1 gap-8 md:mx-[100px] hidden md:block lg:block">
+          <Slider {...settings} ref={(slider) => (Slider.current = slider)}>
+            {videos.map((video, index) => (
+              <div
+                key={index}
+                style={{
+                  height: videoHeight,
+                  overflow: "hidden",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  background: "black",
+                }}
+              >
+                <video
+                  id={`video-${index + 1}`}
+                  controls
+                  poster={video.poster}
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    width: "100%", // Set width to 100%
+                    height: "auto", // Allow height to adjust automatically
+                  }}
+                  className="md:h-[100%] md:w-[100%]"
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
-      <video width="640" height="360" controls>
-        <source src="/portfolio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video width="640" height="360" controls>
-        <source src="/portfolio2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video width="640" height="360" controls>
-        <source src="/portfolio3.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <video width="640" height="360" controls>
-        <source src="/portfolio4.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      
+      <div className="block md:hidden   ">
+      {videos.map((video, index) => (
+              <div
+                key={index}
+                style={{
+                  height: videoHeight,
+                  overflow: "hidden",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  background: "black",
+                }}
+                className="m-[2%] " 
+              >
+                <video
+                  id={`video-${index + 1}`}
+                  controls
+                  poster={video.poster}
+                  className="md:h-[100%] md:w-[100%]"
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+        </div>
     </div>
   );
 };

@@ -41,10 +41,10 @@ const About = () => {
     <section className="page-section" id="about">
       <div className="container">
         <div className="text-center">
-          <h2 className="  section-heading text-uppercase text-gray-700 font-bold text-[18px] md:text-[45px]">About</h2>
+          <h2 className="  section-heading text-uppercase text-gray-700 font-bold text-[16px] md:text-[45px]">About</h2>
           <h3 className="section-subheading text-muted px-[20px] lg:px-[300px] pt-[20px]">
             Welcome to PPT Perfectionist, where every slide tells a story of
-            excellence and impact. I'm Fatima, the founderand creative force
+            excellence and impact. I'm Elene, the founderand creative force
             behind this venture. Let me share a bit of my journey and what
             makesPPT Perfectionist your ultimate destination for presentation
             excellence.{" "}

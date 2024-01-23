@@ -69,8 +69,8 @@ const Client = () => {
                 </svg>
               </div>
               <div className="mt-2">
-              PPT Perfectionist exceeded my expectations. Their personalized presentation helped
-               me connect with my audience on a whole new level. Professionalism, creativity, and results - They deliver it all.
+              “PPT Perfectionist exceeded my expectations. Their personalized presentation helped
+               me connect with my audience on a whole new level. Professionalism, creativity, and results - They deliver it all.“
               </div>
               <div>
                 <div className="mx-auto w-full border border-gray-300 my-8"></div>
@@ -80,10 +80,8 @@ const Client = () => {
                     />
                   </div>
                   <div className="ml-4">
-                    <div className="font-bold">David H. Hansson</div>
-                    <div className="text-sm text-gray-600 mt-1">
-                      CTO, <a href="https://timerse.com/7-steps-to-boost-your-metabolism/">Boosting Metabolism</a>
-                    </div>
+                    <div className="font-bold">H. Cyril</div>
+                   
                   </div>
                 </div>
               </div>
@@ -107,8 +105,8 @@ const Client = () => {
                 </svg>
               </div>
               <div className="mt-2">
-              Working with PPT Perfectionist was a game-changer for our sales pitches.
-               Their personalized approach and attention to detail made a significant difference in our success
+              “Working with PPT Perfectionist was a game-changer for our sales pitches.
+               Their personalized approach and attention to detail made a significant difference in our success“
               </div>
               <div>
                 <div className="mx-auto w-full border border-gray-300 my-8"></div>
@@ -118,8 +116,7 @@ const Client = () => {
                     />
                   </div>
                   <div className="ml-4">
-                    <div className="font-bold">Dan Abramov</div>
-                    <div className="text-sm text-gray-600 mt-1">Creator, <a href="https://swift.org/">Java</a></div>
+                    <div className="font-bold">D. Chihab</div>
                   </div>
                 </div>
               </div>
