@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/_styles/navbar.module.css";
@@ -7,8 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LuDownload, LuMenu } from "react-icons/lu";
 import { CgClose } from "react-icons/cg";
-
-
+import React from 'react';
 const Menu = () => {
   const navlinks = [
     { id: 1, link: "#works", name: "Works" },
@@ -48,8 +46,9 @@ const Menu = () => {
     });
   };
   return (
+    
 <nav
-  className={`bg-white w-screen flex items-center fixed top-0 z-20 drop-shadow-sm z-30 ${
+  className={`bg-white w-screen flex items-center fixed top-0 drop-shadow-sm z-30 ${
     scrolled ? "" : "" /* Remove the bg-white class */
   }`}
 >

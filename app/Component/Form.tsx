@@ -2,7 +2,6 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import { BsFacebook, BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
 import { AiOutlineSend } from "react-icons/ai";
 import { sendContactForm } from "../_lib/api";
 import { toast } from "react-toastify";

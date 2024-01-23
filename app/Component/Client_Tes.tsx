@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import NavLogo from "../../public/assets/FATIMA-removebg-preview.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
@@ -30,7 +29,6 @@ const Client = () => {
 
   return (
       <div className="text-center w-full">
-      <div className="ml-0 mt-0">
         <svg
           className="text-gray-100 h-8 mx-auto"
           fill="currentColor"
@@ -41,8 +39,6 @@ const Client = () => {
         >
           {/* SVG Path Data */}
         </svg>
-      </div>
-
       <div className="relative max-w-screen-xl mt-24 px-8 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 sm:rounded-lg shadow-sm">
         <div className="absolute right-0 bottom-0 hero-pattern w-64 h-56"></div>
         <div className="relative">
@@ -61,9 +57,10 @@ const Client = () => {
                 <svg
                   className="w-8 opacity-25 text-indigo-500"
                   xmlns="http://www.w3.org/2000/svg"
-                  shape-rendering="geometricPrecision"
-                  text-rendering="geometricPrecision"
-                  image-rendering="optimizeQuality"
+                  // shape-rendering="geometricPrecision"
+                  shapeRendering="auto"
+                  textRendering="geometricPrecision"
+                  imageRendering="auto"
                   fillRule="evenodd"
                   clipRule="evenodd"
                   viewBox="0 0 640 640"
@@ -98,9 +95,9 @@ const Client = () => {
                 <svg
                   className="w-8 opacity-25 text-indigo-500"
                   xmlns="http://www.w3.org/2000/svg"
-                  shape-rendering="geometricPrecision"
-                  text-rendering="geometricPrecision"
-                  image-rendering="optimizeQuality"
+                  shapeRendering="auto"
+                  textRendering="geometricPrecision"
+                  imageRendering="auto"
                   fillRule="evenodd"
                   clipRule="evenodd"
                   viewBox="0 0 640 640"

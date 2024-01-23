@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 const Footer = () => {
   return (
     <section className={` flex-col bg-white justify-around pt-10 border-t`}>
