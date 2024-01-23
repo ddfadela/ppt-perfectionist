@@ -22,11 +22,11 @@ const Works = () => {
           tailored specifically to your interests audience and content.
         </p>
       </div>
-      <div className=" mx-[20px] md:mx-[70px]">
+      <div className=" mx-[2%] md:mx-[30px] lg:mx-[70px]">
         <h1 className="font-bold text-xl mb-[30px] ">How It Works:</h1>
-        <div className="flex flex-col md:flex-row gap-8  items-center">
-          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px]">
-            <p className="flex flex-col items-center text-gray-500">
+        <div className="flex flex-col md:flex-row md:gap-1 lg:gap-8 ">
+          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] md:h-auto	lg:h-[320px]">
+            <p className="flex flex-col items-center text-gray-500 ">
               <GoCommentDiscussion
                 className="w-[32px] h-[32px]"
                 style={{ color: "red" }}
@@ -39,7 +39,7 @@ const Works = () => {
               input is inualuable in shaping the presentation.
             </p>
           </div>
-          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px]">
+          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] md:h-auto	lg:h-[320px]">
             <p className="flex flex-col items-center text-gray-500">
               <SiGoogleanalytics
                 className="w-[32px] h-[32px]"
@@ -53,7 +53,7 @@ const Works = () => {
             </p>
           </div>
 
-          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px]">
+          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] md:h-auto	lg:h-[320px]">
             <p className="flex flex-col items-center text-gray-500">
               <MdDesignServices
                 className="w-[32px] h-[32px]"
@@ -68,7 +68,7 @@ const Works = () => {
             </p>
           </div>
 
-          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px]">
+          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] md:h-auto	lg:h-[320px]">
             <p className="flex flex-col items-center text-gray-500">
               <PiStrategy
                 className="w-[32px] h-[32px]"
