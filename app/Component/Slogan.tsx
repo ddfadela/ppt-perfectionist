@@ -32,11 +32,6 @@ const Slogan = () => {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
-  const handleOrderNow = () => {
-    // Redirect to Google.com when the "ORDER NOW" button is clicked
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdV9DjfRdGjHDnNksHkStZZQvUeNQaCDsOuYkvsFT-g_Y_oZQ/viewform?fbclid=IwAR1PigYfVk6e7s1ey3P9yXJ-7J1esAMvxPxPGyOoj8c8wcWW2nFFeST_2BQ";
-  };
-
 
   useEffect(() => {
     let currentIndex = 0;
@@ -74,12 +69,7 @@ const Slogan = () => {
         {visibleText}
         {cursorVisible && <span className="animate-blink">|</span>}
       </p>
-      <button
-      className="order-button hover:bg-blue-700 text-white py-2 px-4  no-border bg-[#4F46E5] bg- border-100px no-shadow rounded-3xl"
-          onClick={handleOrderNow}
-        >
-          ORDER NOW
-        </button>
+      
       </div>
       
      
