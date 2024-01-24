@@ -59,7 +59,7 @@ const Slogan = () => {
   }, [textToDisplay]);
 
   return (
-    <div className="relative min-h-screen mt-0">
+    <div className="max-w-[1920px] relative min-h-screen mt-0">
       
       <div className="absolute inset-0 transform -skew-y-12 origin-top-left z-10  mt-0">
         <div className="bg-cyan-100 grid grid-cols-10 grid-rows-6 min-h-screen bg-gradient-to-r from-cyan-300 to-cyan-200 transform">

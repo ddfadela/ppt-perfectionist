@@ -28,7 +28,7 @@ const Client = () => {
   }, []);
 
   return (
-      <div className="text-center w-full">
+      <div className="text-center w-full max-w-[1920px] ">
         <svg
           className="text-gray-100 h-8 mx-auto"
           fill="currentColor"
@@ -52,7 +52,7 @@ const Client = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:mx-12">
             {/* Testimonial 1 */}
-            <div className="relative mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between">
+            <div className="relative mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-white text-gray-700 leading-snug flex flex-col justify-between">
               <div className="-ml-4">
                 <svg
                   className="w-8 opacity-25 text-indigo-500"
@@ -88,7 +88,7 @@ const Client = () => {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-gray-100 text-gray-700 leading-snug flex flex-col justify-between">
+            <div className="mx-auto mt-8 rounded-lg shadow max-w-sm p-10 bg-white text-gray-700 leading-snug flex flex-col justify-between">
               <div className="-ml-4">
                 <svg
                   className="w-8 opacity-25 text-indigo-500"
@@ -106,7 +106,7 @@ const Client = () => {
               </div>
               <div className="mt-2">
               “Working with PPT Perfectionist was a game-changer for our sales pitches.
-               Their personalized approach and attention to detail made a significant difference in our success“
+              Their personalized approach and attention to detail made a significant difference in our success“
               </div>
               <div>
                 <div className="mx-auto w-full border border-gray-300 my-8"></div>

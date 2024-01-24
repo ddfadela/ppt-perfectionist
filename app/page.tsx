@@ -18,7 +18,7 @@ export default function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
-  <div className='overflow-hidden	'>
+  <div className='overflow-hidden	 overflow-x-hidden '>
     <Menu/>
     <Slogan/>
     <Works/>

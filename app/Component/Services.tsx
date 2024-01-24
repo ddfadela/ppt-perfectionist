@@ -9,7 +9,7 @@ import { PiStrategy } from "react-icons/pi";
 
 const Works = () => {
   return (
-    <div id="services" className="w-full text-center  ">
+    <div id="services" className="max-w-[1920px]  w-full text-center  ">
       <h1 className="title text-2xl lg:text-5xl font-bold text-center mb-[30px] ">
         {" "}
         Services
@@ -68,7 +68,7 @@ const Works = () => {
             </p>
           </div>
 
-          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] md:h-auto	lg:h-[320px]">
+          <div className="card basis-1/4 shadow-lg rounded-lg p-[15px] ">
             <p className="flex flex-col items-center text-gray-500">
               <PiStrategy
                 className="w-[32px] h-[32px]"

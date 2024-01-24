@@ -74,10 +74,9 @@ const Works = () => {
     }
   }, [settings]);
   return (
-    <div id="works" className="w-full text-center">
-      <div className="max-w-[1240px] mx-auto md:px-2 py-16">
-        {/* ... (previous code) */}
-        <div className=" md:grid-cols-1 gap-8 md:mx-[100px] hidden md:block lg:block">
+    <div id="works" className=" works-container overflow-hidden relative max-w-[1920px]  w-full text-center ">
+      <div className="max-w-[920px] mx-auto  py-16">
+        <div className=" md:grid-cols-1 gap-8  hidden md:block lg:block">
           <Slider {...settings} ref={(slider) => (Slider.current = slider)}>
             {videos.map((video, index) => (
               <div

@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <section className={` flex-col bg-white justify-around pt-10 border-t`}>
+    <section className={`max-w-[calc(min(1920px,100vw))]  flex-col bg-white justify-around pt-10 border-t`}>
       <div
         className={`flex justify-center items-start flex-row  mb-2 w-full `}
       >

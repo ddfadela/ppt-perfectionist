@@ -55,7 +55,7 @@ const handleSubmit = async (
 };
 
 return (
-	<div className="bg-[#FFFBFE]  ">
+	<div className="max-w-[1920px]  bg-[#FFFBFE]  ">
 	<div  id='contact'  className="pb-[75px]  text-text px-[20px]  lg:px-[90px]  lg:mx-[200px] text-center ">
 		<p className="title text-4xl lg:text-5xl font-bold text-center pb-[20px]">Contact</p>
 	<div className="flex flex-col md:flex-row justify-center">
@@ -105,14 +105,14 @@ return (
 							htmlFor="name2"
 							className="text-shades-dark mb-2 text-[14px]"
 						>
-							Second name
+							Country
 						</label>
 						<Field
 							type="name2"
 							name="name2"
 							id="name2"
 							className="w-full py-3 border bg-background  rounded-[4px]  px-3 focus:outline-none focus:bg-[#0055A41A] focus:text-text focus:font-medium focus:border-[2px] focus:border-blue-main placeholder-shades-light"
-							placeholder="Second Name"
+							placeholder="Country name"
 						/>
 						<ErrorMessage
 							name="name2"

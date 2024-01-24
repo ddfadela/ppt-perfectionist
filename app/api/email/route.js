@@ -22,7 +22,7 @@ const mailOptions = {
 const CONTACT_MESSAGE_FIELDS = {
 	name1: "name1",
 	email: "Email",
-	name2: "name2",
+	name2: "country",
 	message: "Message",
 };
 const generateEmailContent = (data) => {

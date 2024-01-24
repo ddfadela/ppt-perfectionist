@@ -42,7 +42,7 @@ const items = [
 const [active, setActive] = useState<number | null>(null);
 
 	return (
-		<section id='faq'  className="  px-10 md:px-24 lg:px-32  mb-10 flex justify-center items-center flex-col pt-[50px]">
+		<section id='faq'  className=" max-w-[1920px]  px-10 md:px-24 lg:px-32  mb-10 flex justify-center items-center flex-col pt-[50px]">
 			<h1 className="title text-4xl lg:text-5xl font-bold ">FAQ</h1>
 
 			{items.map((item) => (

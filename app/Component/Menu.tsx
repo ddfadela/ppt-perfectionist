@@ -47,7 +47,7 @@ const Menu = () => {
   return (
     
 <nav
-  className={`bg-white w-screen flex items-center fixed top-0 drop-shadow-sm z-30 ${
+  className={` max-w-[calc(min(1920px,100vw))] bg-white w-screen flex items-center justify-center w-[100%] fixed top-0 drop-shadow-sm z-30 ${
     scrolled ? "" : "" /* Remove the bg-white class */
   }`}
 >
