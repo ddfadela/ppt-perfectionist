@@ -16,18 +16,18 @@ message: string;
 
 const ContactFormSchema = Yup.object().shape({
 name1: Yup.string()
-	.matches(/^[A-Za-z ]+$/, "Nom doit contenir uniquement des lettres")
-	.required("Nom est obligatoire"),
+	.matches(/^[A-Za-z ]+$/, "Name must contain only letters.")
+	.required("Name is required"),
 email: Yup.string()
-	.required("Adresse email est obligatoire")
+	.required("Email address is required.")
 	.matches(
 	/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-	"Adresse email invalide"
+	"Invalid email address."
 	),
 name2: Yup.string()
-.matches(/^[A-Za-z ]+$/, "Nom doit contenir uniquement des lettres")
-.required("Nom est obligatoire"),
-message: Yup.string().required("Message est obligatoire"),
+.matches(/^[A-Za-z ]+$/, "Country must contain only letters.")
+.required("Country required"),
+message: Yup.string().required("Message is required"),
 });
 
 const Formulaire = () => {
