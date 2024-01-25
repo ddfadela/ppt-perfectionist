@@ -9,7 +9,7 @@ import { MdArrowBackIos,MdArrowForwardIos  } from "react-icons/md";
 
 const Works = () => {
   const placeholderDuration = 10; // Set your desired placeholder duration in seconds
-  const videoHeight = "200px"; // Set your desired height for the videos
+  const videoHeight = "500px"; // Set your desired height for the videos
 
   const videos = [
       { src: "/portfolio1.mp4", poster: "/portfolio1.jpg" },
@@ -44,7 +44,7 @@ const Works = () => {
     speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
-    lazyLoad: 'ondemand', // Add lazyLoad property
+    lazyLoad: false, // Add lazyLoad property
     responsive: [
       {
         breakpoint: 768,
@@ -73,6 +73,18 @@ const Works = () => {
       // slider.slickSetOption(settings, true); // Set the updated settings
     }
   }, [settings]);
+  const handleVideoLoaded = (index) => {
+    const videoElement = document.getElementById(`video-${index + 1}`) as HTMLMediaElement;
+    if (videoElement) {
+      videoElement.playbackRate = 3; // Set playback rate to 3
+    }
+  };
+  useEffect(() => {
+    // Set playback rate for each video after the component mounts
+    videos.forEach((_, index) => {
+      handleVideoLoaded(index);
+    });
+  }, []);
   return (
     <div id="works" className=" works-container overflow-hidden relative max-w-[1920px]  w-full text-center ">
       <div className="max-w-[920px] mx-auto  py-16">
@@ -98,9 +110,11 @@ const Works = () => {
                     objectFit: "cover",
                     objectPosition: "center",
                     width: "100%", // Set width to 100%
-                    height: "auto", // Allow height to adjust automatically
+                    height: videoHeight, // Allow height to adjust automatically
                   }}
-                  className="md:h-[100%] md:w-[100%]"
+                  className=" md:w-[100%]"
+                  onLoadedData={() => handleVideoLoaded(index)}
+                  
                 >
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.
@@ -130,6 +144,7 @@ const Works = () => {
                   controls
                   poster={video.poster}
                   className="md:h-[100%] md:w-[100%]"
+                  onLoadedData={() => handleVideoLoaded(index)}
                 >
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support the video tag.

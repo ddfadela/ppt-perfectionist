@@ -26,7 +26,7 @@ email: Yup.string()
 	),
 name2: Yup.string()
 .matches(/^[A-Za-z ]+$/, "Country must contain only letters.")
-.required("Country required"),
+.required("Country is required"),
 message: Yup.string().required("Message is required"),
 });
 
