@@ -7,7 +7,7 @@ const pass = process.env.EMAIL_PASS;
 // const destinationEmail = process.env.DEST_EMAIL;
 
 const transporter = nodemailer.createTransport({
-	service: "gmail",
+	service: "hotmail",
 	auth: {
 		user: email,
 		pass,

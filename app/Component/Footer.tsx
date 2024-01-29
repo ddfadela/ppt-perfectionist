@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
   const handleEmailClick = () => {
-    window.location.href = "mailto:ppt.perfectionist@gmail.com";
+    window.location.href = "mailto:ppt.perfectionist@outlook.com";
   };
 
   return (
